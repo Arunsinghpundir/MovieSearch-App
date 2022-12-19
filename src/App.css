@@ -124,4 +124,8 @@ input::placeholder {
     border-radius: 5px;
     scale: 1;
   }
+
+  input {
+    width: 300px;
+  }
 }
