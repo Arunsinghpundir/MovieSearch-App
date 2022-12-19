@@ -117,9 +117,7 @@ input::placeholder {
     display: grid;
     grid-template-columns: repeat(1, auto);
   }
-  .visible {
-    transform: translateY(-150px) translateX(111px);
-  }
+
   img:hover {
     border-radius: 5px;
     scale: 1;
