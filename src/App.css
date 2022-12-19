@@ -1,0 +1,127 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+.movie-grid {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+}
+img {
+  margin: 30px 30px;
+  height: 300px;
+  width: 300px;
+  border-radius: 15px;
+  transition: 1s;
+}
+img:hover {
+  border-radius: 5px;
+  scale: 1.1;
+  filter: drop-shadow(0 0 22px #61dafbaa);
+}
+.visible {
+  font-size: 15px;
+  padding: 20px 0;
+  margin-bottom: 0;
+  transform: translateY(-150px) translateX(30px);
+  background-color: rgba(0, 0, 0, 0.856);
+  filter: drop-shadow(0 0 15px 20px #000000aa);
+  width: 300px;
+  border-radius: 5px;
+  visibility: visible;
+  transition: 0.8s;
+}
+.hidden {
+  transition: 0.3s;
+  visibility: hidden;
+}
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+  margin: 0 auto;
+}
+
+input {
+  padding-left: 15px;
+  border-radius: 3px;
+  height: 30px;
+  width: 500px;
+  font-weight: bold;
+  font-size: 15px;
+}
+input::placeholder {
+  text-align: center;
+}
+@media (prefers-color-scheme: light) {
+  .visible {
+    color: #ffffff;
+  }
+  img:hover {
+    border-radius: 5px;
+    scale: 1;
+    filter: drop-shadow(0 0 22px #020202aa);
+  }
+}
+
+@media screen and (max-width: 960px) and (min-width: 561px) {
+  .movie-grid {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+  }
+  img:hover {
+    border-radius: 5px;
+    scale: 1;
+  }
+}
+@media screen and (max-width: 560px) {
+  .movie-grid {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+  }
+  .visible {
+    transform: translateY(-150px) translateX(111px);
+  }
+  img:hover {
+    border-radius: 5px;
+    scale: 1;
+  }
+}
