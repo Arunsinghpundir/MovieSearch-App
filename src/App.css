@@ -65,10 +65,16 @@ input::placeholder {
 button {
   height: 25px;
   margin-top: 7px;
-  scale: 1.1;
+  scale: 1.4;
   color: #000;
   border-radius: 15px;
   filter: drop-shadow(0 0 5px #020202aa);
+  transition: 0.6s;
+  background-color: rgba(0, 0, 0, 0.342);
+}
+button:hover {
+  box-shadow: 0 0 12px 5px #61dafbaa;
+  scale: 1.2;
 }
 .imgBox {
   margin-bottom: -50px;
@@ -111,6 +117,6 @@ button {
     width: 300px;
   }
   .imgBox {
-    margin-bottom: -150px;
+    margin-bottom: -100px;
   }
 }
