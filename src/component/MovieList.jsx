@@ -7,15 +7,15 @@ const MovieList = function(props){
         return setFlag(!flag);
       }
     return (
-        <div className="movie-grid">
-        {props.movie.map((list)=>(
-            <div >
-                <img onClick={showImg} src={list.Poster} alt={list.Title} />
-                <div className={flag? visibility : "visible"}>
-                <div >Title: {list.Title}</div>
-                <div>Released in: {list.Year}</div>
-                </div>
-               
+        <div className="movie-grid" >
+        {props.movie.map((movie)=>(
+            <div className="imgBox">
+                <img onClick={showImg} src={movie.Poster} alt={movie.Title} />
+            <div className={flag? visibility : "visible"}>
+                <div >Title: {movie.Title}</div>
+                <div>Released in: {movie.Year}</div>
+                <button onClick={()=>props.handleFavMovie(movie)}>{props.name}</button>
+            </div>
             </div>
         ))}
         </div>

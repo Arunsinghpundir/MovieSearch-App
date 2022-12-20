@@ -5,45 +5,12 @@
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
 .movie-grid {
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(3, auto);
+  grid-template-columns: repeat(3, 1fr);
 }
+
 img {
   margin: 30px 30px;
   height: 300px;
@@ -51,6 +18,7 @@ img {
   border-radius: 15px;
   transition: 1s;
 }
+
 img:hover {
   border-radius: 5px;
   scale: 1.1;
@@ -60,7 +28,7 @@ img:hover {
   font-size: 15px;
   padding: 20px 0;
   margin-bottom: 0;
-  transform: translateY(-150px) translateX(30px);
+  transform: translateY(-180px) translateX(30px);
   background-color: rgba(0, 0, 0, 0.856);
   filter: drop-shadow(0 0 15px 20px #000000aa);
   width: 300px;
@@ -72,12 +40,17 @@ img:hover {
   transition: 0.3s;
   visibility: hidden;
 }
-h1 {
+.MovHead {
   font-size: 3.2em;
   line-height: 1.1;
   margin: 0 auto;
 }
-
+.FavHead {
+  font-size: 2.2em;
+  line-height: 1.1;
+  scale: 0.8;
+  margin: 30px auto;
+}
 input {
   padding-left: 15px;
   border-radius: 3px;
@@ -88,6 +61,17 @@ input {
 }
 input::placeholder {
   text-align: center;
+}
+button {
+  height: 25px;
+  margin-top: 7px;
+  scale: 1.1;
+  color: #000;
+  border-radius: 15px;
+  filter: drop-shadow(0 0 5px #020202aa);
+}
+.imgBox {
+  margin-bottom: -50px;
 }
 @media (prefers-color-scheme: light) {
   .visible {
@@ -104,7 +88,7 @@ input::placeholder {
   .movie-grid {
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(2, 1fr);
   }
   img:hover {
     border-radius: 5px;
@@ -115,7 +99,7 @@ input::placeholder {
   .movie-grid {
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(1, auto);
+    grid-template-columns: repeat(1, 1fr);
   }
 
   img:hover {
@@ -125,5 +109,8 @@ input::placeholder {
 
   input {
     width: 300px;
+  }
+  .imgBox {
+    margin-bottom: -150px;
   }
 }
