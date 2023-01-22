@@ -9,8 +9,7 @@ import { SearchBox } from './component/SearchBox';
 function App() {
   const [movie,setMovies] = useState([]);
   const [search, setSearch] = useState("don");
-  let fav = JSON.parse(localStorage.getItem("fav"));
-  
+  let fav = JSON.parse(localStorage.getItem("fav")) || [];
   const [favourite,setfavourite] = useState(fav);
   
   const getMovieRequest = async (search)=>{
