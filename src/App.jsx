@@ -9,8 +9,10 @@ import { SearchBox } from './component/SearchBox';
 function App() {
   const [movie,setMovies] = useState([]);
   const [search, setSearch] = useState("don");
-  const [favourite,setfavourite] = useState([]);
-
+  let fav = JSON.parse(localStorage.getItem("fav"));
+  
+  const [favourite,setfavourite] = useState(fav);
+  
   const getMovieRequest = async (search)=>{
     const url = `https://www.omdbapi.com/?s=${search}&apikey=e43ec240`;
     const api = await fetch(url);
@@ -26,12 +28,14 @@ function App() {
   const addFavMovie = (movie)=>{
     if(!favourite.includes(movie)){
       const newFavMovie = [...favourite, movie];
+      localStorage.setItem("fav", JSON.stringify(newFavMovie));
       setfavourite(newFavMovie);
     }
-
   }
+
   const removeFavMovie = (movie)=>{
     const newFavMovie = favourite.filter((favourite)=>favourite.imdbID !== movie.imdbID);
+    localStorage.setItem("fav", JSON.stringify(newFavMovie));
     setfavourite(newFavMovie);
   };
 
